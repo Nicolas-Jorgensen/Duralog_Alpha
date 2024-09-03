@@ -1,6 +1,3 @@
-// COMSC-210 - Nicolas Jorgensen
-// Lab 30 - <fire sim>
-
 // Include necessary headers for file handling, data structures, etc.
 #include <cstdlib>
 #include <ctime> 
@@ -24,9 +21,9 @@ void printFire(const map<pair<int,int>, array<list<int>, 3>> &fireGrid, int time
     int fireNum = 0, spaces = 7;
     int clear = system("clear");
     for(auto tile : fireGrid) {
-        //array<list<int>,3> fireTile = tile.second;
+    
         auto it = tile.second[0].begin();
-        //auto end = fireTile[0].end();
+        
         advance(it,timeAt);
             if(fireNum == 0 || fireNum == 1 || fireNum == 3 || fireNum == 6
             || fireNum == 10) {
@@ -105,12 +102,7 @@ void calcTemp(map<pair<int,int>, array<list<int>, 3>> &fireGrid, int totalTime) 
 int main() {
     map<pair<int,int>, array<list<int>, 3>> fire;
     int num; //t = 0; //time
-    //int clear;
-    /*srand(time(0));
-    for(int i = 0; i < 80; i++) {
-        printFire();
-        this_thread::sleep_for(milliseconds(60));
-    } */
+ 
     for (int height = 0; height < LAYERS; height++) { //filling temperature of map with 0
         for(int row = 0; row <= height; row++) {
             array<list<int>, 3> empties = {
