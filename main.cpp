@@ -13,7 +13,7 @@
 #include <iterator>
 using namespace std;
 using namespace chrono;
-
+//sets length of simulation and size of fire. Layers > 5 not supported
 const int THIRDSOFMIN = 50, LAYERS = 5; 
  
 void printFire(const map<pair<int,int>, array<list<int>, 3>> &fireGrid, int timeAt) {
